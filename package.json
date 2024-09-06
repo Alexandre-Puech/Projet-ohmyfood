@@ -1,0 +1,12 @@
+{
+  "name": "projet-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss:css",
+    "watch": "sass --watch scss:css"
+  },
+  "author": "",
+  "license": "ISC"
+}
