@@ -28,26 +28,28 @@
   <body>
     <div class="main-container">
       <header>
-        <nav>
-          <img src="public/images/logo/ohmyfood.png" />
-          <div class="location-bar">
-            <i class="fa-solid fa-location-dot"></i>
-            <h3>Paris, Belleville</h3>
-          </div>
-        </nav>
+        <div class="logo-bar">
+          <img
+            src="public/images/logo/ohmyfood.png"
+            alt="logo-site"
+            class="header-logo"
+          />
+        </div>
+        <div class="location-bar">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>Paris, Belleville</h3>
+        </div>
       </header>
       <main>
-        <div class="presentation">
-          <h1>Réservez le menu qui vous convient</h1>
-          <h3>
-            Découvrez des restaurants d'exception, sélectionnés par nos soins
-          </h3>
-          <div class="button-explorer">
-            <input type="submit" value="Explorer nos restaurants" id="button" />
+        <h1>Réservez le menu qui vous convient</h1>
+        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+        <a href="#restaurants" class="button-explorer">
+          Explorer nos restaurants
+        </a>
+        <section class="fonctionnement">
+          <div class="section-title">
+            <h2>Fonctionnement</h2>
           </div>
-        </div>
-        <div class="fonctionnement">
-          <h2>Fonctionnement</h2>
           <div class="button-fonctionnement">
             <div class="chiffre">
               <h3>1</h3>
@@ -75,9 +77,11 @@
               <h2>Dégustez au restaurant</h2>
             </div>
           </div>
-        </div>
-        <div class="restaurants">
-          <h2>Restaurants</h2>
+        </section>
+        <section class="restaurants" id="restaurants">
+          <div class="section-title">
+            <h2>Restaurants</h2>
+          </div>
           <article class="card">
             <a href="#">
               <img
@@ -134,7 +138,7 @@
               </div>
             </a>
           </article>
-        </div>
+        </section>
       </main>
       <footer>
         <div class="footer-logo">
