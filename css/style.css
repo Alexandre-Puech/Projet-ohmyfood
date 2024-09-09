@@ -39,6 +39,11 @@ header .location-bar {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
+.explications {
+  margin-top: 39px;
+  margin-bottom: 57px;
+}
+
 h1 {
   font-weight: 700px;
   font-size: 1.5rem;
@@ -67,6 +72,50 @@ p {
   margin: auto;
   text-decoration: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 48px 20px;
+  background-color: white;
+  gap: 25px;
+}
+.fonctionnement .button-fonctionnement {
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+  align-items: center;
+  background-color: #f6f6f6;
+  border: 1px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  margin-left: 12.51px;
+  position: relative;
+}
+.fonctionnement .button-fonctionnement .chiffre {
+  display: flex;
+  background-color: #9356dc;
+  border: 1px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -3%;
+}
+.fonctionnement .button-fonctionnement .button-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 27px;
+  padding-left: 33.5px;
+}
+.fonctionnement .button-fonctionnement .button-text i {
+  color: #7e7e7e;
 }
 
 /*# sourceMappingURL=style.css.map */
