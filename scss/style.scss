@@ -17,9 +17,9 @@ $secondary-back: white;
 body {
   display: flex;
   justify-content: center;
+  background-color: $background-color;
   margin: 0%;
   padding: 0px;
-  background-color: $background-color;
 }
 .main-container {
   width: 100%;
@@ -51,42 +51,46 @@ header {
 .explications {
   margin-top: 39px;
   margin-bottom: 57px;
-}
-h1 {
-  font-weight: 700px;
-  font-size: 1.5rem;
-  text-align: center;
-}
-p {
-  font-weight: 300px;
-  font-size: 1.125rem;
-  text-align: center;
-}
-.button-explorer {
-  display: block;
-  border: 0px solid black;
-  border-radius: 50px;
-  padding: 18.75px 13px;
-  margin-top: 27px;
-  font-size: 1rem;
-  font-weight: 500;
-  background: rgb(147, 86, 220);
-  background: linear-gradient(0deg, $purple-primary 0%, $pink-secondary 100%);
-  color: white;
-  text-align: center;
-  width: 218px;
-  margin: auto;
-  text-decoration: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  h1 {
+    font-weight: 700px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  p {
+    font-weight: 300px;
+    font-size: 1.125rem;
+    text-align: center;
+  }
+  .button-explorer {
+    display: block;
+    border: 0px solid black;
+    border-radius: 50px;
+    padding: 18.75px 13px;
+    margin-top: 27px;
+    font-size: 1rem;
+    font-weight: 500;
+    background: rgb(147, 86, 220);
+    background: linear-gradient(0deg, $purple-primary 0%, $pink-secondary 100%);
+    color: white;
+    text-align: center;
+    width: 218px;
+    margin: auto;
+    text-decoration: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
 }
 
 .fonctionnement {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 48px 20px;
+  margin: 48px 0px;
   background-color: $secondary-back;
   gap: 25px;
+  .section-title {
+    margin-left: 20px;
+  }
   .button-fonctionnement {
     display: flex;
     flex-direction: row;
@@ -98,6 +102,8 @@ p {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     margin-left: 12.51px;
     position: relative;
+    width: 90%;
+    margin-left: 20px;
     .chiffre {
       display: flex;
       background-color: $purple-primary;
@@ -121,5 +127,69 @@ p {
         color: #7e7e7e;
       }
     }
+  }
+}
+
+.restaurants {
+  margin: 20px;
+}
+
+.restaurants-cards {
+  gap: 18px;
+  display: flex;
+  flex-direction: column;
+  .card {
+    height: 251px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    background-color: $secondary-back;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative;
+    align-items: baseline;
+    justify-content: end;
+  }
+  img {
+    width: 100%;
+    height: 231px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+    position: absolute;
+    bottom: 31%;
+  }
+  .card-content {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+footer {
+  background-color: $footer-color;
+  padding: 22px 25px;
+  color: white;
+  gap: 16px;
+  height: 186px;
+  .footer-links {
+    height: 99px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    a {
+      text-decoration: none;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 11px;
+      font-size: 1rem;
+    }
+  }
+  .footer-logo h2 {
+    font-family: "Shrikhand", sans-serif;
   }
 }
