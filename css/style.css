@@ -129,6 +129,10 @@ header .location-bar {
   display: flex;
   flex-direction: column;
 }
+.restaurants-cards a {
+  text-decoration: none;
+  color: black;
+}
 .restaurants-cards .card {
   height: 251px;
   display: flex;
@@ -152,10 +156,34 @@ header .location-bar {
   bottom: 31%;
 }
 .restaurants-cards .card-content {
-  height: 25%;
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-left: 16px;
+}
+.restaurants-cards .card-content .card-title {
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+.restaurants-cards .card-content .card-subtitle {
+  margin: 0;
+}
+.restaurants-cards .card-new {
+  position: absolute;
+  bottom: 78%;
+  left: 72.5%;
+}
+.restaurants-cards .card-new p {
+  background-color: #99e2d0;
+  color: #008766;
+  padding: 7px 9px;
+  border: 1px;
+  border-radius: 2px;
+}
+.restaurants-cards .card-heart {
+  position: relative;
+  bottom: 14%;
+  left: 81%;
 }
 
 footer {
