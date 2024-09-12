@@ -53,12 +53,12 @@ header {
   margin-bottom: 57px;
 
   h1 {
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 1.5rem;
     text-align: center;
   }
   p {
-    font-weight: 300px;
+    font-weight: 300;
     font-size: 1.125rem;
     text-align: center;
   }
@@ -169,6 +169,7 @@ header {
     display: flex;
     flex-direction: column;
     margin-left: 16px;
+    margin-bottom: 12px;
     .card-title {
       margin-top: 10px;
       margin-bottom: 4px;
@@ -189,16 +190,19 @@ header {
       border-radius: 2px;
     }
   }
-  .card-heart {
-    position: relative;
-    bottom: 14%;
-    left: 81%;
-    // i {
-    //   width: 22px;
-    //   height: 21px;
-    //   font-size: 22px;
-    // }
-  }
+  // .card-heart {
+  //   position: relative;
+  //   bottom: 14%;
+  //   left: 81%;
+  //   i {
+  //     width: 22px;
+  //     height: 21px;
+  //     font-size: 22px;
+  //   }
+  //   .card-heart:active {
+  //     background-color: $pink-secondary;
+  //   }
+  // }
 }
 
 footer {
