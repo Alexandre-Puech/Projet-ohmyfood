@@ -78,6 +78,11 @@ header {
     margin: auto;
     text-decoration: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: transform 200ms;
+    &:hover {
+      transform: scale(1.01);
+      opacity: 0.9;
+    }
   }
 }
 
@@ -190,19 +195,29 @@ header {
       border-radius: 2px;
     }
   }
-  // .card-heart {
-  //   position: relative;
-  //   bottom: 14%;
-  //   left: 81%;
-  //   i {
-  //     width: 22px;
-  //     height: 21px;
-  //     font-size: 22px;
-  //   }
-  //   .card-heart:active {
-  //     background-color: $pink-secondary;
-  //   }
-  // }
+  #toggle-heart {
+    position: absolute;
+    top: 81%;
+    left: 85%;
+    z-index: 1;
+    opacity: 0;
+  }
+  .heart-button {
+    display: inline-block;
+    background-image: url("../public/images/hollow-3.png");
+    background-size: cover;
+    background-position: center;
+    width: 22px;
+    height: 21px;
+    cursor: pointer;
+    transition: background-image 0.2s;
+    position: absolute;
+    top: 81%;
+    left: 85%;
+  }
+  #toggle-heart:checked + .heart-button {
+    background-image: url("../public/images/coloured-2.png");
+  }
 }
 
 footer {
