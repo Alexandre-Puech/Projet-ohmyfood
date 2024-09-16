@@ -87,6 +87,12 @@ header .location-bar {
 .fonctionnement .section-title {
   margin-left: 20px;
 }
+.fonctionnement .buttons-function {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 68px;
+}
 .fonctionnement .button-fonctionnement {
   display: flex;
   flex-direction: row;
@@ -215,7 +221,6 @@ footer {
   padding: 22px 25px;
   color: white;
   gap: 16px;
-  height: 186px;
 }
 footer .footer-links {
   height: 99px;
@@ -234,6 +239,48 @@ footer .footer-links a {
 }
 footer .footer-logo h2 {
   font-family: "Shrikhand", sans-serif;
+}
+
+@media (min-width: 767.98px) {
+  .fonctionnement .section-title,
+  .fonctionnement .buttons-function {
+    margin: auto;
+    max-width: 1080px;
+  }
+  .fonctionnement .buttons-function {
+    flex-direction: row;
+    max-width: 1080px;
+  }
+  .fonctionnement .buttons-function .button-fonctionnement {
+    width: 33%;
+  }
+  .restaurants {
+    margin: auto;
+    max-width: 1080px;
+    margin-bottom: 30px;
+  }
+  .restaurants-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 100px;
+  }
+  .restaurants-cards .card {
+    flex-basis: calc(50% - 100px);
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    align-items: center;
+  }
+  footer .footer-links {
+    flex-direction: row;
+    gap: 10px;
+  }
+  footer .footer-logo h2 {
+    height: 27px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -96,6 +96,12 @@ header {
   .section-title {
     margin-left: 20px;
   }
+  .buttons-function {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 68px;
+  }
   .button-fonctionnement {
     display: flex;
     flex-direction: row;
@@ -225,7 +231,7 @@ footer {
   padding: 22px 25px;
   color: white;
   gap: 16px;
-  height: 186px;
+
   .footer-links {
     height: 99px;
     display: flex;
@@ -243,5 +249,50 @@ footer {
   }
   .footer-logo h2 {
     font-family: "Shrikhand", sans-serif;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .fonctionnement {
+    .section-title,
+    .buttons-function {
+      margin: auto;
+      max-width: 1080px;
+    }
+    .buttons-function {
+      flex-direction: row;
+      max-width: 1080px;
+      .button-fonctionnement {
+        width: 33%;
+      }
+    }
+  }
+
+  .restaurants {
+    margin: auto;
+    max-width: 1080px;
+    margin-bottom: 30px;
+  }
+  .restaurants-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 100px;
+    .card {
+      flex-basis: calc(50% - 100px);
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    align-items: center;
+    .footer-links {
+      flex-direction: row;
+      gap: 10px;
+    }
+    .footer-logo h2 {
+      height: 27px;
+    }
   }
 }
