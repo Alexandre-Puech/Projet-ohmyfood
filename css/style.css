@@ -53,7 +53,8 @@ header .location-bar {
   font-size: 1.125rem;
   text-align: center;
 }
-.explications .button-explorer {
+
+.button-explorer {
   display: block;
   border: 0px solid black;
   border-radius: 50px;
@@ -71,7 +72,7 @@ header .location-bar {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: transform 200ms;
 }
-.explications .button-explorer:hover {
+.button-explorer:hover {
   transform: scale(1.01);
   opacity: 0.9;
 }
@@ -133,6 +134,21 @@ header .location-bar {
 
 .restaurants {
   margin: 20px;
+}
+
+.heart-button {
+  display: inline-block;
+  background-image: url("../public/images/hollow-3.png");
+  background-size: cover;
+  background-position: center;
+  width: 22px;
+  height: 21px;
+  cursor: pointer;
+  transition: background-image 0.2s;
+}
+
+#toggle-heart:checked + .heart-button {
+  background-image: url("../public/images/coloured-2.png");
 }
 
 .restaurants-cards {
@@ -200,14 +216,6 @@ header .location-bar {
   opacity: 0;
 }
 .restaurants-cards .heart-button {
-  display: inline-block;
-  background-image: url("../public/images/hollow-3.png");
-  background-size: cover;
-  background-position: center;
-  width: 22px;
-  height: 21px;
-  cursor: pointer;
-  transition: background-image 0.2s;
   position: absolute;
   top: 81%;
   left: 85%;
@@ -239,6 +247,63 @@ footer .footer-links a {
 }
 footer .footer-logo h2 {
   font-family: "Shrikhand", sans-serif;
+}
+
+.courbure {
+  position: relative;
+  top: -20px;
+  height: 20px;
+  width: 100%;
+  background-color: #f6f6f6;
+  z-index: 1;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.header-picture .restaurant-picture {
+  object-fit: cover;
+  width: 100%;
+  height: 275px;
+  z-index: 0;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin: 0px 17px;
+  gap: 43px;
+}
+.title h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  white-space: nowrap;
+  margin-top: 0px;
+}
+.title .heart-button {
+  position: absolute;
+  top: 37%;
+  left: 85.5%;
+}
+.title #toggle-heart {
+  z-index: 1;
+  opacity: 0;
+}
+
+.menu {
+  margin: 0px 13px;
+}
+
+.bloc-menus {
+  display: flex;
+  flex-direction: column;
+}
+.bloc-menus h2 {
+  font-weight: 300;
+  font-size: 1rem;
+  border-bottom: 3px solid #99e2d0;
+  padding-bottom: 9px;
+  width: 40px;
 }
 
 @media (min-width: 767.98px) {

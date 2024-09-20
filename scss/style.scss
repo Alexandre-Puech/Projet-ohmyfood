@@ -62,27 +62,27 @@ header {
     font-size: 1.125rem;
     text-align: center;
   }
-  .button-explorer {
-    display: block;
-    border: 0px solid black;
-    border-radius: 50px;
-    padding: 18.75px 13px;
-    margin-top: 27px;
-    font-size: 1rem;
-    font-weight: 500;
-    background: rgb(147, 86, 220);
-    background: linear-gradient(0deg, $purple-primary 0%, $pink-secondary 100%);
-    color: white;
-    text-align: center;
-    width: 218px;
-    margin: auto;
-    text-decoration: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: transform 200ms;
-    &:hover {
-      transform: scale(1.01);
-      opacity: 0.9;
-    }
+}
+.button-explorer {
+  display: block;
+  border: 0px solid black;
+  border-radius: 50px;
+  padding: 18.75px 13px;
+  margin-top: 27px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, $purple-primary 0%, $pink-secondary 100%);
+  color: white;
+  text-align: center;
+  width: 218px;
+  margin: auto;
+  text-decoration: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: transform 200ms;
+  &:hover {
+    transform: scale(1.01);
+    opacity: 0.9;
   }
 }
 
@@ -143,6 +143,20 @@ header {
 
 .restaurants {
   margin: 20px;
+}
+
+.heart-button {
+  display: inline-block;
+  background-image: url("../public/images/hollow-3.png");
+  background-size: cover;
+  background-position: center;
+  width: 22px;
+  height: 21px;
+  cursor: pointer;
+  transition: background-image 0.2s;
+}
+#toggle-heart:checked + .heart-button {
+  background-image: url("../public/images/coloured-2.png");
 }
 
 .restaurants-cards {
@@ -209,14 +223,6 @@ header {
     opacity: 0;
   }
   .heart-button {
-    display: inline-block;
-    background-image: url("../public/images/hollow-3.png");
-    background-size: cover;
-    background-position: center;
-    width: 22px;
-    height: 21px;
-    cursor: pointer;
-    transition: background-image 0.2s;
     position: absolute;
     top: 81%;
     left: 85%;
@@ -249,6 +255,62 @@ footer {
   }
   .footer-logo h2 {
     font-family: "Shrikhand", sans-serif;
+  }
+}
+
+//Restaurants
+.courbure {
+  position: relative;
+  top: -20px;
+  height: 20px;
+  width: 100%;
+  background-color: $background-color;
+  z-index: 1;
+  border-radius: 25px 25px 0px 0px;
+}
+.header-picture {
+  .restaurant-picture {
+    object-fit: cover;
+    width: 100%;
+    height: 275px;
+    z-index: 0;
+  }
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin: 0px 17px;
+  gap: 43px;
+  h1 {
+    font-family: "Shrikhand", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    white-space: nowrap;
+    margin-top: 0px;
+  }
+  .heart-button {
+    position: absolute;
+    top: 37%;
+    left: 85.5%;
+  }
+  #toggle-heart {
+    z-index: 1;
+    opacity: 0;
+  }
+}
+.menu {
+  margin: 0px 13px;
+}
+.bloc-menus {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-weight: 300;
+    font-size: 1rem;
+    border-bottom: 3px solid $light-green;
+    padding-bottom: 9px;
+    width: 40px;
   }
 }
 
