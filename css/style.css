@@ -154,7 +154,7 @@ header .location-bar {
   transition: background-image 0.5s ease;
 }
 
-#toggle-heart:checked + .heart-button {
+.toggle-heart:checked + .heart-button {
   background-image: url("../public/images/coloured-2.png");
 }
 
@@ -218,7 +218,7 @@ header .location-bar {
   border: 1px;
   border-radius: 2px;
 }
-.restaurants-cards #toggle-heart {
+.restaurants-cards .toggle-heart {
   position: absolute;
   top: 81%;
   left: 85%;
@@ -232,7 +232,7 @@ header .location-bar {
   top: 81%;
   left: 85%;
 }
-.restaurants-cards #toggle-heart:checked + .heart-button {
+.restaurants-cards .toggle-heart:checked + .heart-button {
   background-image: url("../public/images/coloured-2.png");
 }
 
@@ -305,7 +305,7 @@ footer .footer-logo h2 {
   top: 36%;
   left: 85.5%;
 }
-.title #toggle-heart {
+.title .toggle-heart {
   z-index: 1;
   opacity: 0;
   cursor: pointer;

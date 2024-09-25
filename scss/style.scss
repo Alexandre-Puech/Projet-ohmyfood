@@ -162,7 +162,7 @@ header {
   cursor: pointer;
   transition: background-image 0.5s ease;
 }
-#toggle-heart:checked + .heart-button {
+.toggle-heart:checked + .heart-button {
   background-image: url("../public/images/coloured-2.png");
 }
 
@@ -225,7 +225,7 @@ header {
       border-radius: 2px;
     }
   }
-  #toggle-heart {
+  .toggle-heart {
     position: absolute;
     top: 81%;
     left: 85%;
@@ -239,7 +239,7 @@ header {
     top: 81%;
     left: 85%;
   }
-  #toggle-heart:checked + .heart-button {
+  .toggle-heart:checked + .heart-button {
     background-image: url("../public/images/coloured-2.png");
   }
 }
@@ -315,7 +315,7 @@ footer {
     top: 36%;
     left: 85.5%;
   }
-  #toggle-heart {
+  .toggle-heart {
     z-index: 1;
     opacity: 0;
     cursor: pointer;
