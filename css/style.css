@@ -3,6 +3,70 @@
   font-family: "Roboto", sans-serif;
 }
 
+.load {
+  width: 360px;
+  height: 67.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 1;
+  animation: fadeOutLoader 2s;
+  visibility: visible;
+}
+.load .load-text {
+  font-family: "Shrikhand", sans-serif;
+  height: 100%;
+  width: 45px;
+  animation: letters 0.75s backwards 2 ease-in-out reverse;
+}
+.load .load-text--1 {
+  animation-delay: 0.09375s;
+}
+.load .load-text--2 {
+  animation-delay: 0.1875s;
+}
+.load .load-text--3 {
+  animation-delay: 0.28125s;
+}
+.load .load-text--4 {
+  animation-delay: 0.375s;
+}
+.load .load-text--5 {
+  animation-delay: 0.46875s;
+}
+.load .load-text--6 {
+  animation-delay: 0.5625s;
+}
+.load .load-text--7 {
+  animation-delay: 0.65625s;
+}
+.load .load-text--8 {
+  animation-delay: 0.75s;
+}
+
+@keyframes letters {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.5);
+  }
+}
+@keyframes fadeOutLoader {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 body {
   display: flex;
   justify-content: center;
@@ -22,6 +86,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 2px;
+  background-color: white;
 }
 header .logo-bar {
   display: flex;
@@ -76,7 +141,7 @@ header .location-bar {
   margin: auto;
   text-decoration: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: transform 200ms;
+  transition: all 200ms;
 }
 .button-explorer:hover {
   transform: scale(1.01);
@@ -151,7 +216,7 @@ header .location-bar {
   width: 22px;
   height: 21px;
   cursor: pointer;
-  transition: background-image 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .toggle-heart:checked + .heart-button {
@@ -339,6 +404,14 @@ footer .footer-logo h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  overflow: hidden;
+}
+.bloc-menus .card:hover .menu-animation {
+  transform: translateX(0%);
+  gap: 0px;
+}
+.bloc-menus .card .card-content p {
+  text-overflow: ellipsis;
 }
 .bloc-menus .card .card-content {
   line-height: 5px;
@@ -347,6 +420,7 @@ footer .footer-logo h2 {
 .bloc-menus .card h3 {
   font-size: 18px;
   font-weight: 500;
+  text-wrap: nowrap;
 }
 .bloc-menus .card p {
   font-size: 15px;
@@ -364,11 +438,20 @@ footer .footer-logo h2 {
   border-radius: 0px 15px 15px 0px;
   align-items: center;
   justify-content: center;
-  display: none;
+  opacity: 1;
+  z-index: 1;
+  transform: all 2s ease;
 }
 .bloc-menus .card .check-mark i {
   width: 20px;
   height: 20px;
+}
+.bloc-menus .card .menu-animation {
+  display: flex;
+  flex-direction: row;
+  transform: translateX(65%);
+  gap: 10px;
+  transition: transform 0.5s ease;
 }
 
 @media (min-width: 767.98px) {
@@ -415,6 +498,33 @@ footer .footer-logo h2 {
   }
   footer .footer-logo h2 {
     height: 27px;
+  }
+  .bloc-menus {
+    max-width: 1080px;
+    width: 100%;
+  }
+  .header-picture {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+  .courbure {
+    max-width: 1080px;
+    height: 40px;
+    top: -16px;
+  }
+  header {
+    margin-bottom: 0px;
+    background-color: #f6f6f6;
+  }
+  header .logo-bar {
+    background-color: white;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -15px;
   }
 }
 
