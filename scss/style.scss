@@ -19,20 +19,19 @@ $num-letters: 8;
 $anim-delay: calc($anim-duration / $num-letters);
 $extra-delay: 0.25s;
 
-.load {
+#load {
   width: $loader-size * 8;
   height: $loader-size * 1.5;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0px;
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: absolute;
+  top: 50%;
+  left: 5%;
   z-index: 100;
-  opacity: 1;
+  opacity: 0;
   animation: fadeOutLoader 2s;
-  visibility: visible;
   .load-text {
     font-family: "Shrikhand", sans-serif;
     height: 100%;
@@ -56,11 +55,13 @@ $extra-delay: 0.25s;
 @keyframes fadeOutLoader {
   0% {
     opacity: 1;
-    visibility: visible;
+  }
+  75% {
+    opacity: 0.75;
   }
   100% {
     opacity: 0;
-    visibility: hidden;
+    pointer-events: none;
   }
 }
 
@@ -71,10 +72,22 @@ body {
   margin: 0%;
   padding: 0px;
 }
-.main-container {
+#main {
   width: 100%;
   box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out $anim-duration * 2.5 forwards;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
+
 header {
   display: flex;
   flex-direction: column;
@@ -230,8 +243,8 @@ header {
   a {
     text-decoration: none;
     color: black;
-  }
-  .card {
+    width: 100%;
+    height: 100%;
     height: 251px;
     display: flex;
     flex-direction: column;
@@ -451,6 +464,9 @@ footer {
 }
 
 @media (min-width: 767.98px) {
+  #load {
+    left: 40%;
+  }
   .fonctionnement {
     align-items: center;
     .contenu-fonctionnement {
@@ -515,9 +531,6 @@ footer {
   header {
     margin-bottom: 0px;
     background-color: $background-color;
-    .logo-bar {
-      background-color: $secondary-back;
-    }
   }
   main {
     display: flex;
