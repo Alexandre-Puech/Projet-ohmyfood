@@ -3,7 +3,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-#load {
+.load {
   width: 360px;
   height: 67.5px;
   display: flex;
@@ -17,34 +17,34 @@
   opacity: 0;
   animation: fadeOutLoader 2s;
 }
-#load .load-text {
+.load .load-text {
   font-family: "Shrikhand", sans-serif;
   height: 100%;
   width: 45px;
   animation: letters 0.75s backwards 2 ease-in-out reverse;
 }
-#load .load-text--1 {
+.load .load-text--1 {
   animation-delay: 0.09375s;
 }
-#load .load-text--2 {
+.load .load-text--2 {
   animation-delay: 0.1875s;
 }
-#load .load-text--3 {
+.load .load-text--3 {
   animation-delay: 0.28125s;
 }
-#load .load-text--4 {
+.load .load-text--4 {
   animation-delay: 0.375s;
 }
-#load .load-text--5 {
+.load .load-text--5 {
   animation-delay: 0.46875s;
 }
-#load .load-text--6 {
+.load .load-text--6 {
   animation-delay: 0.5625s;
 }
-#load .load-text--7 {
+.load .load-text--7 {
   animation-delay: 0.65625s;
 }
-#load .load-text--8 {
+.load .load-text--8 {
   animation-delay: 0.75s;
 }
 
@@ -74,11 +74,15 @@ body {
   background-color: #f6f6f6;
   margin: 0%;
   padding: 0px;
+  color: black;
 }
 
-#main {
+.main-container {
   width: 100%;
   box-sizing: border-box;
+}
+
+#main-index {
   opacity: 0;
   transition: opacity 1s ease-in-out;
   animation: fadeIn 1s ease-in-out 1.875s forwards;
@@ -98,13 +102,15 @@ header {
   justify-content: center;
   align-items: center;
   gap: 2px;
-  background-color: white;
+  background-color: #f6f6f6;
 }
 header .logo-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  background-color: white;
+  width: 100%;
 }
 header .header-logo {
   width: 197px;
@@ -236,6 +242,12 @@ header .location-bar {
 }
 
 .card {
+  background-color: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.card-wrapper {
   background-color: white;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -414,56 +426,56 @@ footer .footer-logo h2 {
 }
 .bloc-menus .card {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   overflow: hidden;
-}
-.bloc-menus .card:hover .menu-animation {
-  transform: translateX(0%);
-  gap: 0px;
-}
-.bloc-menus .card .card-content p {
-  text-overflow: ellipsis;
+  height: 72px;
+  margin: auto;
 }
 .bloc-menus .card .card-content {
-  line-height: 5px;
-  margin: 0px 15px;
+  padding: 12px 0 12px 15px;
+  width: 270px;
+  transition: 1s;
 }
-.bloc-menus .card h3 {
+.bloc-menus .card .card-content p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+.bloc-menus .card .card-title {
   font-size: 18px;
   font-weight: 500;
-  text-wrap: nowrap;
 }
-.bloc-menus .card p {
+.bloc-menus .card .card-subtitle {
   font-size: 15px;
   font-weight: 300;
-  text-wrap: nowrap;
 }
 .bloc-menus .card .card-price {
-  margin-right: 13.5px;
+  width: 47px;
+  display: flex;
+  align-self: center;
+  transition: 0.7s;
 }
 .bloc-menus .card .check-mark {
   display: flex;
   background-color: #99e2d0;
   color: white;
-  width: 59px;
+  width: 0px;
   border-radius: 0px 15px 15px 0px;
   align-items: center;
   justify-content: center;
-  opacity: 1;
-  z-index: 1;
-  transform: all 2s ease;
+  transform: translateX(59px);
+  transition: 0.7s;
 }
 .bloc-menus .card .check-mark i {
   width: 20px;
   height: 20px;
 }
-.bloc-menus .card .menu-animation {
-  display: flex;
-  flex-direction: row;
-  transform: translateX(65%);
-  gap: 10px;
-  transition: transform 0.5s ease;
+.bloc-menus .card:hover .check-mark {
+  transform: translateX(0px);
+  width: 59px;
+}
+.bloc-menus .card:hover .card-content {
+  width: 250px;
 }
 
 @media (min-width: 767.98px) {
@@ -514,9 +526,21 @@ footer .footer-logo h2 {
   footer .footer-logo h2 {
     height: 27px;
   }
+  .header-picture .restaurant-picture {
+    height: 383px;
+  }
   .bloc-menus {
     max-width: 1080px;
     width: 100%;
+  }
+  .bloc-menus .card {
+    width: 634px;
+  }
+  .bloc-menus .card .card-content {
+    width: 572px;
+  }
+  .bloc-menus .card:hover .card-content {
+    width: 600px;
   }
   .header-picture {
     width: 100%;
@@ -526,17 +550,32 @@ footer .footer-logo h2 {
   .courbure {
     max-width: 1080px;
     height: 40px;
-    top: -16px;
+    top: -15px;
   }
   header {
     margin-bottom: 0px;
-    background-color: #f6f6f6;
+    background-color: white;
+  }
+  .title .heart-button {
+    position: absolute;
+    top: 56%;
+    left: 61%;
   }
   main {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: -15px;
+    background-color: white;
+  }
+  .main-content {
+    background-color: #f6f6f6;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 1080px;
+    align-items: center;
+    justify-content: center;
   }
 }
 

@@ -19,7 +19,7 @@ $num-letters: 8;
 $anim-delay: calc($anim-duration / $num-letters);
 $extra-delay: 0.25s;
 
-#load {
+.load {
   width: $loader-size * 8;
   height: $loader-size * 1.5;
   display: flex;
@@ -71,10 +71,14 @@ body {
   background-color: $background-color;
   margin: 0%;
   padding: 0px;
+  color: black;
 }
-#main {
+.main-container {
   width: 100%;
   box-sizing: border-box;
+}
+
+#main-index {
   opacity: 0;
   transition: opacity 1s ease-in-out;
   animation: fadeIn 1s ease-in-out $anim-duration * 2.5 forwards;
@@ -94,12 +98,14 @@ header {
   justify-content: center;
   align-items: center;
   gap: 2px;
-  background-color: $secondary-back;
+  background-color: $background-color;
   .logo-bar {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    background-color: $secondary-back;
+    width: 100%;
   }
   .header-logo {
     width: 197px;
@@ -235,6 +241,11 @@ header {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
+.card-wrapper {
+  background-color: $secondary-back;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
 
 .restaurants-cards {
   gap: 18px;
@@ -335,6 +346,7 @@ footer {
 }
 
 //Restaurants
+
 .logo-bar {
   i {
     font-size: 30px;
@@ -410,56 +422,56 @@ footer {
 
   .card {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     overflow: hidden;
-    &:hover .menu-animation {
-      transform: translateX(0%);
-      gap: 0px;
-    }
-    .card-content p {
-      text-overflow: ellipsis;
-    }
+    height: 72px;
+    margin: auto;
     .card-content {
-      line-height: 5px;
-      margin: 0px 15px;
+      padding: 12px 0 12px 15px;
+      width: 270px;
+      transition: 1s;
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+      }
     }
-    h3 {
+    .card-title {
       font-size: 18px;
       font-weight: 500;
-      text-wrap: nowrap;
     }
-    p {
+    .card-subtitle {
       font-size: 15px;
       font-weight: 300;
-      text-wrap: nowrap;
     }
     .card-price {
-      margin-right: 13.5px;
+      width: 47px;
+      display: flex;
+      align-self: center;
+      transition: 0.7s;
     }
     .check-mark {
       display: flex;
       background-color: $light-green;
       color: $secondary-back;
-      width: 59px;
+      width: 0px;
       border-radius: 0px 15px 15px 0px;
       align-items: center;
       justify-content: center;
-      opacity: 1;
-      z-index: 1;
-      transform: all 2s ease;
+      transform: translateX(59px);
+      transition: 0.7s;
       i {
         width: 20px;
         height: 20px;
       }
     }
-    .menu-animation {
-      display: flex;
-      flex-direction: row;
-      transform: translateX(65%);
-      gap: 10px;
-      transition: transform 0.5s ease;
-    }
+  }
+  .card:hover .check-mark {
+    transform: translateX(-0px);
+    width: 59px;
+  }
+  .card:hover .card-content {
+    width: 250px;
   }
 }
 
@@ -514,9 +526,24 @@ footer {
       height: 27px;
     }
   }
+  .header-picture {
+    .restaurant-picture {
+      height: 383px;
+    }
+  }
+
   .bloc-menus {
     max-width: 1080px;
     width: 100%;
+    .card {
+      width: 634px;
+      .card-content {
+        width: 572px;
+      }
+    }
+    .card:hover .card-content {
+      width: 600px;
+    }
   }
   .header-picture {
     width: 100%;
@@ -526,16 +553,33 @@ footer {
   .courbure {
     max-width: 1080px;
     height: 40px;
-    top: -16px;
+    top: -15px;
   }
   header {
     margin-bottom: 0px;
-    background-color: $background-color;
+    background-color: $secondary-back;
+  }
+  .title {
+    .heart-button {
+      position: absolute;
+      top: 56%;
+      left: 61%;
+    }
   }
   main {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: -15px;
+    background-color: $secondary-back;
+  }
+  .main-content {
+    background-color: $background-color;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 1080px;
+    align-items: center;
+    justify-content: center;
   }
 }
