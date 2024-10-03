@@ -532,6 +532,7 @@ footer .footer-logo h2 {
   .restaurants {
     margin: auto;
     max-width: 1080px;
+    width: 100%;
     margin-bottom: 30px;
   }
   .restaurants-cards {
