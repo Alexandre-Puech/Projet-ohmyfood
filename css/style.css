@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Shrikhand", sans-serif;
   font-family: "Roboto", sans-serif;
@@ -80,6 +81,10 @@ body {
 .main-container {
   width: 100%;
   box-sizing: border-box;
+}
+
+#lne {
+  width: 100%;
 }
 
 #main-index {
@@ -395,6 +400,9 @@ footer .footer-logo h2 {
   left: 85.5%;
 }
 .title .toggle-heart {
+  position: absolute;
+  top: 36%;
+  left: 85.5%;
   z-index: 1;
   opacity: 0;
   cursor: pointer;
@@ -411,6 +419,28 @@ footer .footer-logo h2 {
 .bloc-menus {
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: ApparitionMenus 2s ease-out forwards;
+}
+@keyframes ApparitionMenus {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Départ légèrement décalé */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.bloc-menus #entree {
+  animation-delay: 0.5s;
+}
+.bloc-menus #plats {
+  animation-delay: 1.25s;
+}
+.bloc-menus #desserts {
+  animation-delay: 2s;
 }
 .bloc-menus h2 {
   font-weight: 300;
@@ -479,7 +509,7 @@ footer .footer-logo h2 {
 }
 
 @media (min-width: 767.98px) {
-  #load {
+  .load {
     left: 40%;
   }
   .fonctionnement {
@@ -555,6 +585,11 @@ footer .footer-logo h2 {
   header {
     margin-bottom: 0px;
     background-color: white;
+  }
+  .title .toggle-heart {
+    position: absolute;
+    top: 56%;
+    left: 61%;
   }
   .title .heart-button {
     position: absolute;

@@ -78,6 +78,10 @@ body {
   box-sizing: border-box;
 }
 
+#lne {
+  width: 100%;
+}
+
 #main-index {
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -392,6 +396,9 @@ footer {
     left: 85.5%;
   }
   .toggle-heart {
+    position: absolute;
+    top: 36%;
+    left: 85.5%;
     z-index: 1;
     opacity: 0;
     cursor: pointer;
@@ -407,6 +414,28 @@ footer {
 .bloc-menus {
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: ApparitionMenus 2s ease-out forwards;
+  @keyframes ApparitionMenus {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Départ légèrement décalé */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  #entree {
+    animation-delay: 0.5s;
+  }
+  #plats {
+    animation-delay: 1.25s;
+  }
+  #desserts {
+    animation-delay: 2s;
+  }
   h2 {
     font-weight: 300;
     font-size: 1rem;
@@ -476,7 +505,7 @@ footer {
 }
 
 @media (min-width: 767.98px) {
-  #load {
+  .load {
     left: 40%;
   }
   .fonctionnement {
@@ -560,6 +589,11 @@ footer {
     background-color: $secondary-back;
   }
   .title {
+    .toggle-heart {
+      position: absolute;
+      top: 56%;
+      left: 61%;
+    }
     .heart-button {
       position: absolute;
       top: 56%;
