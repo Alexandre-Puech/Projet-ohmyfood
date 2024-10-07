@@ -225,6 +225,9 @@ header .location-bar {
 .fonctionnement .button-fonctionnement .button-text i {
   color: #7e7e7e;
 }
+.fonctionnement .button-fonctionnement:hover i {
+  color: #9356dc;
+}
 
 .restaurants {
   margin: 20px;

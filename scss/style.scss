@@ -196,6 +196,7 @@ header {
     position: relative;
     width: 90%;
     margin-left: 20px;
+
     .chiffre {
       display: flex;
       background-color: $purple-primary;
@@ -218,6 +219,9 @@ header {
       i {
         color: #7e7e7e;
       }
+    }
+    &:hover i {
+      color: $purple-primary;
     }
   }
 }
