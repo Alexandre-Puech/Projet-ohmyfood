@@ -315,18 +315,13 @@ header .location-bar {
   border-radius: 2px;
 }
 .restaurants-cards .toggle-heart {
-  position: absolute;
-  top: 81%;
+  position: relative;
+  bottom: 18%;
   left: 85%;
   z-index: 1;
-  opacity: 0;
+  opacity: 1;
   cursor: pointer;
   transition: background-image 200ms;
-}
-.restaurants-cards .heart-button {
-  position: absolute;
-  top: 81%;
-  left: 85%;
 }
 .restaurants-cards .toggle-heart:checked + .heart-button {
   background-image: url("../public/images/coloured-2.png");
@@ -452,10 +447,11 @@ footer .footer-logo h2 {
   overflow: hidden;
   height: 72px;
   margin: auto;
+  width: 100%;
 }
 .bloc-menus .card .card-content {
   padding: 12px 0 12px 15px;
-  width: 270px;
+  width: 290px;
   transition: 1s;
 }
 .bloc-menus .card .card-content p {
@@ -475,8 +471,8 @@ footer .footer-logo h2 {
 .bloc-menus .card .card-price {
   width: 47px;
   display: flex;
-  align-self: center;
   transition: 0.7s;
+  transform: translateX(10px);
 }
 .bloc-menus .card .check-mark {
   display: flex;
@@ -497,8 +493,12 @@ footer .footer-logo h2 {
   transform: translateX(0px);
   width: 59px;
 }
+.bloc-menus .card:hover .card-price {
+  transform: translateX(5px);
+}
 .bloc-menus .card:hover .card-content {
-  width: 250px;
+  width: 240px;
+  transition: 0.5s;
 }
 
 #entree {

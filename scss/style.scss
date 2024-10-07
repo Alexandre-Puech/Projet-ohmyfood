@@ -309,19 +309,31 @@ header {
     }
   }
   .toggle-heart {
-    position: absolute;
-    top: 81%;
+    position: relative;
+    bottom: 18%;
     left: 85%;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
     cursor: pointer;
     transition: background-image 200ms;
   }
-  .heart-button {
-    position: absolute;
-    top: 81%;
-    left: 85%;
-  }
+  // .heart-button {
+  //   position: relative;
+  //   left: 85%;
+  // }
+  // .heart1 {
+  //   top: 103%;
+  // }
+  // .heart2 {
+  //   top: 130%;
+  // }
+  // .heart3 {
+  //   top: 158%;
+  // }
+  // .heart4 {
+  //   top: 186%;
+  // }
+
   .toggle-heart:checked + .heart-button {
     background-image: url("../public/images/coloured-2.png");
   }
@@ -452,9 +464,10 @@ footer {
     overflow: hidden;
     height: 72px;
     margin: auto;
+    width: 100%;
     .card-content {
       padding: 12px 0 12px 15px;
-      width: 270px;
+      width: 290px;
       transition: 1s;
       p {
         white-space: nowrap;
@@ -474,8 +487,8 @@ footer {
     .card-price {
       width: 47px;
       display: flex;
-      align-self: center;
       transition: 0.7s;
+      transform: translateX(10px);
     }
     .check-mark {
       display: flex;
@@ -497,8 +510,12 @@ footer {
     transform: translateX(-0px);
     width: 59px;
   }
+  .card:hover .card-price {
+    transform: translateX(5px);
+  }
   .card:hover .card-content {
-    width: 250px;
+    width: 240px;
+    transition: 0.5s;
   }
 }
 #entree {
