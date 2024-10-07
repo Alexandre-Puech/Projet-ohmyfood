@@ -309,31 +309,41 @@ header {
     }
   }
   .toggle-heart {
-    position: relative;
-    bottom: 18%;
+    position: absolute;
     left: 85%;
     z-index: 1;
-    opacity: 1;
+    opacity: 0;
     cursor: pointer;
     transition: background-image 200ms;
   }
-  // .heart-button {
-  //   position: relative;
-  //   left: 85%;
-  // }
-  // .heart1 {
-  //   top: 103%;
-  // }
-  // .heart2 {
-  //   top: 130%;
-  // }
-  // .heart3 {
-  //   top: 158%;
-  // }
-  // .heart4 {
-  //   top: 186%;
-  // }
-
+  .heart-button {
+    position: absolute;
+    left: 85%;
+  }
+  .heart1 {
+    top: 102%;
+  }
+  .heart2 {
+    top: 127.5%;
+  }
+  .heart3 {
+    top: 153%;
+  }
+  .heart4 {
+    top: 178.5%;
+  }
+  .check1 {
+    top: 102%;
+  }
+  .check2 {
+    top: 127.5%;
+  }
+  .check3 {
+    top: 153%;
+  }
+  .check4 {
+    top: 178.5%;
+  }
   .toggle-heart:checked + .heart-button {
     background-image: url("../public/images/coloured-2.png");
   }
@@ -565,6 +575,45 @@ footer {
     gap: 100px;
     .card {
       flex-basis: calc(50% - 50px);
+    }
+    .toggle-heart {
+      position: absolute;
+    }
+
+    .heart-button {
+      position: absolute;
+    }
+    .heart1 {
+      top: 105%;
+      left: 38%;
+    }
+    .heart2 {
+      top: 105%;
+      left: 87%;
+    }
+    .heart3 {
+      top: 145%;
+      left: 38%;
+    }
+    .heart4 {
+      top: 145%;
+      left: 87%;
+    }
+    .check1 {
+      top: 105%;
+      left: 38%;
+    }
+    .check2 {
+      top: 105%;
+      left: 87%;
+    }
+    .check3 {
+      top: 145%;
+      left: 38%;
+    }
+    .check4 {
+      top: 145%;
+      left: 87%;
     }
   }
   footer {
