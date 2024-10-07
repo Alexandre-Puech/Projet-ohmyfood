@@ -353,6 +353,9 @@ footer .footer-links a {
   gap: 11px;
   font-size: 1rem;
 }
+footer .footer-links .handshake {
+  gap: 5px;
+}
 footer .footer-logo h2 {
   font-family: "Shrikhand", sans-serif;
 }
