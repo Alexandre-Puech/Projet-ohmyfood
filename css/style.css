@@ -581,6 +581,9 @@ footer .footer-logo h2 {
   .bloc-menus .card .card-content {
     width: 572px;
   }
+  .bloc-menus .card .card-price {
+    transform: translateX(0px);
+  }
   .bloc-menus .card:hover .card-content {
     width: 600px;
   }

@@ -584,6 +584,9 @@ footer {
       .card-content {
         width: 572px;
       }
+      .card-price {
+        transform: translateX(0px);
+      }
     }
     .card:hover .card-content {
       width: 600px;
