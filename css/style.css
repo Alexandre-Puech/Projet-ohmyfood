@@ -265,6 +265,9 @@ header .location-bar {
   display: flex;
   flex-direction: column;
 }
+.restaurants-cards .card {
+  height: 251px;
+}
 .restaurants-cards a {
   text-decoration: none;
   color: black;
@@ -273,7 +276,6 @@ header .location-bar {
   height: 251px;
   display: flex;
   flex-direction: column;
-  width: 100%;
   overflow: hidden;
   position: relative;
   align-items: baseline;
@@ -315,40 +317,17 @@ header .location-bar {
   border-radius: 2px;
 }
 .restaurants-cards .toggle-heart {
-  position: absolute;
-  left: 85%;
+  position: relative;
+  left: 81%;
+  bottom: 14.5%;
   z-index: 1;
   opacity: 0;
   cursor: pointer;
-  transition: background-image 200ms;
 }
 .restaurants-cards .heart-button {
-  position: absolute;
-  left: 85%;
-}
-.restaurants-cards .heart1 {
-  top: 102%;
-}
-.restaurants-cards .heart2 {
-  top: 127.5%;
-}
-.restaurants-cards .heart3 {
-  top: 153%;
-}
-.restaurants-cards .heart4 {
-  top: 178.5%;
-}
-.restaurants-cards .check1 {
-  top: 102%;
-}
-.restaurants-cards .check2 {
-  top: 127.5%;
-}
-.restaurants-cards .check3 {
-  top: 153%;
-}
-.restaurants-cards .check4 {
-  top: 178.5%;
+  position: relative;
+  left: 79.5%;
+  bottom: 21.5%;
 }
 .restaurants-cards .toggle-heart:checked + .heart-button {
   background-image: url("../public/images/coloured-2.png");
@@ -575,44 +554,6 @@ footer .footer-logo h2 {
   }
   .restaurants-cards .card {
     flex-basis: calc(50% - 50px);
-  }
-  .restaurants-cards .toggle-heart {
-    position: absolute;
-  }
-  .restaurants-cards .heart-button {
-    position: absolute;
-  }
-  .restaurants-cards .heart1 {
-    top: 105%;
-    left: 38%;
-  }
-  .restaurants-cards .heart2 {
-    top: 105%;
-    left: 87%;
-  }
-  .restaurants-cards .heart3 {
-    top: 145%;
-    left: 38%;
-  }
-  .restaurants-cards .heart4 {
-    top: 145%;
-    left: 87%;
-  }
-  .restaurants-cards .check1 {
-    top: 105%;
-    left: 38%;
-  }
-  .restaurants-cards .check2 {
-    top: 105%;
-    left: 87%;
-  }
-  .restaurants-cards .check3 {
-    top: 145%;
-    left: 38%;
-  }
-  .restaurants-cards .check4 {
-    top: 145%;
-    left: 87%;
   }
   footer {
     display: flex;

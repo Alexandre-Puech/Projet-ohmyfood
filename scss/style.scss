@@ -259,6 +259,9 @@ header {
   gap: 18px;
   display: flex;
   flex-direction: column;
+  .card {
+    height: 251px;
+  }
   a {
     text-decoration: none;
     color: black;
@@ -267,7 +270,6 @@ header {
     height: 251px;
     display: flex;
     flex-direction: column;
-    width: 100%;
     overflow: hidden;
     position: relative;
     align-items: baseline;
@@ -309,41 +311,19 @@ header {
     }
   }
   .toggle-heart {
-    position: absolute;
-    left: 85%;
+    position: relative;
+    left: 81%;
+    bottom: 14.5%;
     z-index: 1;
     opacity: 0;
     cursor: pointer;
-    transition: background-image 200ms;
   }
   .heart-button {
-    position: absolute;
-    left: 85%;
+    position: relative;
+    left: 79.5%;
+    bottom: 21.5%;
   }
-  .heart1 {
-    top: 102%;
-  }
-  .heart2 {
-    top: 127.5%;
-  }
-  .heart3 {
-    top: 153%;
-  }
-  .heart4 {
-    top: 178.5%;
-  }
-  .check1 {
-    top: 102%;
-  }
-  .check2 {
-    top: 127.5%;
-  }
-  .check3 {
-    top: 153%;
-  }
-  .check4 {
-    top: 178.5%;
-  }
+
   .toggle-heart:checked + .heart-button {
     background-image: url("../public/images/coloured-2.png");
   }
@@ -575,45 +555,6 @@ footer {
     gap: 100px;
     .card {
       flex-basis: calc(50% - 50px);
-    }
-    .toggle-heart {
-      position: absolute;
-    }
-
-    .heart-button {
-      position: absolute;
-    }
-    .heart1 {
-      top: 105%;
-      left: 38%;
-    }
-    .heart2 {
-      top: 105%;
-      left: 87%;
-    }
-    .heart3 {
-      top: 145%;
-      left: 38%;
-    }
-    .heart4 {
-      top: 145%;
-      left: 87%;
-    }
-    .check1 {
-      top: 105%;
-      left: 38%;
-    }
-    .check2 {
-      top: 105%;
-      left: 87%;
-    }
-    .check3 {
-      top: 145%;
-      left: 38%;
-    }
-    .check4 {
-      top: 145%;
-      left: 87%;
     }
   }
   footer {
